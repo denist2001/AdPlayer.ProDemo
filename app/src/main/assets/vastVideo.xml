@@ -1,0 +1,28 @@
+<VAST version="3.0">
+    <Ad>
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>Demo</AdTitle>
+            <Description>
+                <![CDATA[ Demo ]]>
+            </Description>
+            <Creatives>
+                <Creative>
+                    <Linear>
+                        <Duration>00:00:11</Duration>
+                        <VideoClicks>
+                            <ClickThrough>
+                                <![CDATA[ ../ ]]>
+                            </ClickThrough>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile delivery="progressive" width="300" height="150" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[ testVideo.mp4 ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
