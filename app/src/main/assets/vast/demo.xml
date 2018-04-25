@@ -16,8 +16,8 @@
                             </ClickThrough>
                         </VideoClicks>
                         <MediaFiles>
-                            <MediaFile delivery="progressive" width="300" height="150" type="video/mp4" scalable="true" maintainAspectRatio="true">
-                                <![CDATA[ testVideo.mp4 ]]>
+                            <MediaFile delivery="progressive" width="640" height="360" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[ /video/demo_v2.mp4 ]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>

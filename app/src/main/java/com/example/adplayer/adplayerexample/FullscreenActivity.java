@@ -106,7 +106,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private class ListArrayAdapter extends ArrayAdapter<String> {
 
-        private String BASE_URL = "file:///android_asset/";
+        private String BASE_URL = "file:///android_asset/"; //"https://cdn.stat-rock.com"
         private String ENCODING = "UTF-8";
         private String MIME_TYPE = "text/html";
         private String HISTORY_URL = BASE_URL;
@@ -157,14 +157,14 @@ public class FullscreenActivity extends AppCompatActivity {
 //                    webView.addJavascriptInterface(new AdLifecycleListener(), "lifecycleListener");
 //                    addContentView(webView, params);
                 webView.setLayoutParams(params);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    String playerJs = loadLocalFile(parent, "demo.js");
-//                    webView.evaluateJavascript(playerJs, value -> {
-//                    });
-                }
-//                Log.d("Loading", bannerHtml);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//                    String playerJs = loadLocalFile(parent, "demo.js");
+//                    playerJs = playerJs + loadLocalFile(parent, "InPageLocalVideo.js");
+//                    webView.loadUrl("javascript:(" + playerJs + ")()");
+//                }
                 String bannerHtml = loadLocalFile(parent, "InPageLocalVideo.html");
-                webView.loadData(bannerHtml, MIME_TYPE, ENCODING);
+                Log.d("Loading", bannerHtml);
+                webView.loadDataWithBaseURL(BASE_URL, bannerHtml, MIME_TYPE, ENCODING, HISTORY_URL);
                 return webView;
             }
             LayoutInflater inflater = (LayoutInflater) getContext()
